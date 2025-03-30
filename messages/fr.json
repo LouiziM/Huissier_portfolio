@@ -1,0 +1,140 @@
+{
+  "AboutSection": {
+    "imageAlt": "Khaddari Abdelmottalib",
+    "title": "À Propos de moi",
+    "description1": "Huissier de justice assermenté exerçant à Casablanca depuis plus de 15 ans. Fort d'une solide formation juridique et d'une expérience approfondie dans le domaine judiciaire, il met son expertise au service des particuliers et des professionnels.",
+    "description2": "Notre cabinet se distingue par son professionnalisme, sa rigueur et son engagement à fournir des services juridiques de haute qualité. Nous accordons une importance particulière à l'écoute de nos clients et à la compréhension de leurs besoins spécifiques pour leur offrir des solutions adaptées."
+  },
+  "Header": {
+    "jobTitle": "Huissier de Justice Assermenté",
+    "toggleTheme": "Changer de thème",
+    "menu": "Menu",
+    "close": "Fermer",
+    "phone": "05 22 54 19 08 / 06 27 27 39 10",
+    "home": "Accueil",
+    "about": "À Propos",
+    "services": "Services",
+    "missions": "Missions",
+    "contact": "Contact",
+    "quoteRequest": "Demander un Devis",
+    "french": "Français",
+    "arabic": "Arabe",
+    "english": "Anglais"
+  },
+  "ContactSection": {
+    "title": "Contactez-nous",
+    "description": "Pour toute demande d'information ou prise de rendez-vous, n'hésitez pas à nous contacter. Nous vous répondrons dans les plus brefs délais.",
+    "phoneTitle": "Téléphone",
+    "phone1": "06 27 27 39 10",
+    "phone2": "05 22 54 19 08",
+    "emailTitle": "Email",
+    "hoursTitle": "Horaires",
+    "weekdaysHours": "Lun - Ven: 9h00 - 18h00",
+    "saturdayHours": "Sam: 9h00 - 13h00",
+    "addressTitle": "Adresse",
+    "address": "3 Rue de Thann Bd rahhal el meskini, Casablanca 20000, Maroc",
+    "mapTitle": "Localisation du cabinet",
+    "formTitle": "Envoyez-nous un message",
+    "lastName": "Nom",
+    "lastNamePlaceholder": "Votre nom",
+    "firstName": "Prénom",
+    "firstNamePlaceholder": "Votre prénom",
+    "email": "Email",
+    "emailPlaceholder": "Votre email",
+    "phone": "Téléphone",
+    "phonePlaceholder": "Votre numéro de téléphone",
+    "subject": "Sujet",
+    "subjectPlaceholder": "Sujet de votre message",
+    "message": "Message",
+    "messagePlaceholder": "Votre message",
+    "submit": "Envoyer",
+    "submitting": "Envoi en cours...",
+    "submitSuccess": "Message envoyé avec succès!",
+    "submitError": "Échec de l'envoi du message. Veuillez réessayer."
+  },
+  "HeroSection": {
+    "titleLine1": "Expertise Juridique et",
+    "titleLine2": "Procédures d'Exécution",
+    "description": "Khaddari Abdelmottalib, huissier de justice assermenté, vous accompagne dans toutes vos démarches juridiques avec rigueur et professionnalisme.",
+    "appointmentButton": "Prendre Rendez-vous",
+    "servicesButton": "Nos Services"
+  },
+  "MissionsSection": {
+    "title": "Notre Mission",
+    "description": "En tant qu'officier ministériel, notre mission est d'assurer l'exécution des décisions de justice et de garantir la sécurité juridique de nos clients.",
+    "missions": {
+      "efficiency": {
+        "title": "Efficacité",
+        "description": "Nous nous engageons à traiter vos dossiers avec rapidité et efficacité."
+      },
+      "confidentiality": {
+        "title": "Confidentialité",
+        "description": "Nous garantissons une discrétion absolue dans le traitement de vos affaires."
+      },
+      "professionalism": {
+        "title": "Professionnalisme",
+        "description": "Notre équipe est formée pour vous offrir un service de qualité irréprochable."
+      },
+      "accessibility": {
+        "title": "Accessibilité",
+        "description": "Nous restons disponibles et à l'écoute de vos besoins spécifiques."
+      }
+    },
+    "commitment": "\"Notre engagement : vous offrir un service juridique de qualité, personnalisé et adapté à vos besoins spécifiques.\""
+  },
+  "QuoteSection": {
+    "quote": "\"La justice est la constante et perpétuelle volonté de rendre à chacun ce qui lui est dû.\"",
+    "author": "Ulpien, jurisconsulte romain"
+  },
+  "ServicesSection": {
+    "title": "Nos Services",
+    "description": "Notre cabinet d'huissier de justice propose une gamme complète de services juridiques pour répondre à vos besoins.",
+    "services": {
+      "actService": {
+        "title": "Signification d'actes",
+        "description": "Notification officielle de documents juridiques aux parties concernées."
+      },
+      "judgmentExecution": {
+        "title": "Exécution de jugements",
+        "description": "Mise en œuvre des décisions de justice et recouvrement de créances."
+      },
+      "observations": {
+        "title": "Constats",
+        "description": "Établissement de preuves légales par la constatation de faits matériels."
+      },
+      "debtRecovery": {
+        "title": "Recouvrement de créances",
+        "description": "Procédures amiables et judiciaires pour le recouvrement de sommes dues."
+      },
+      "legalDrafting": {
+        "title": "Rédaction d'actes",
+        "description": "Élaboration de documents juridiques conformes à la législation en vigueur."
+      },
+      "legalAdvice": {
+        "title": "Conseil juridique",
+        "description": "Accompagnement et orientation dans vos démarches juridiques."
+      }
+    }
+  },
+    "Footer": {
+      "officeTitle": "Notre Bureau",
+      "officeAddress": "3 Rue de Thann Bd rahhal el meskini, Casablanca 20000, Maroc",
+      "emailTitle": "Email",
+      "phoneTitle": "Téléphone",
+      "phoneNumbers": "05 22 54 19 08 / 06 27 27 39 10",
+      "description": "Huissier de justice à Casablanca spécialisé dans les procédures de notification, d'exécution et de constat.",
+      "popularLinks": "Liens Populaires",
+      "quickLinks": "Liens Rapides",
+      "home": "Accueil",
+      "about": "À Propos",
+      "services": "Services",
+      "missions": "Missions",
+      "contact": "Contact",
+      "faq": "FAQ",
+      "help": "Aide",
+      "copyright": "© Cabinet Khaddari Abdelmottalib. Tous droits réservés.",
+      "designedBy": "Conçu par",
+      "devName": "DEVLouizi",
+      "devPhone": "0631093503"
+    }
+}

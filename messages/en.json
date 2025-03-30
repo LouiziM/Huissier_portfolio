@@ -1,0 +1,141 @@
+{
+  "AboutSection": {
+    "imageAlt": "Khaddari Abdelmottalib",
+    "title": "About Me",
+    "description1": "Sworn bailiff practicing in Casablanca for over 15 years. With solid legal training and extensive experience in the judicial field, he puts his expertise at the service of individuals and professionals.",
+    "description2": "Our firm stands out for its professionalism, rigor, and commitment to providing high-quality legal services. We place particular importance on listening to our clients and understanding their specific needs to offer them tailored solutions."
+  },
+  "Header": {
+    "jobTitle": "Sworn Bailiff",
+    "toggleTheme": "Toggle theme",
+    "menu": "Menu",
+    "close": "Close",
+    "phone": "05 22 54 19 08 / 06 27 27 39 10",
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "missions": "Missions",
+    "contact": "Contact",
+    "quoteRequest": "Request a Quote",
+    "french": "French",
+    "arabic": "Arabic",
+    "english": "English"
+  },
+  "ContactSection": {
+    "title": "Contact Us",
+    "description": "For any information request or appointment, please don't hesitate to contact us. We will respond as soon as possible.",
+    "phoneTitle": "Phone",
+    "phone1": "06 27 27 39 10",
+    "phone2": "05 22 54 19 08",
+    "emailTitle": "Email",
+    "hoursTitle": "Working Hours",
+    "weekdaysHours": "Mon - Fri: 9:00 AM - 6:00 PM",
+    "saturdayHours": "Sat: 9:00 AM - 1:00 PM",
+    "addressTitle": "Address",
+    "address": "3 Rue de Thann Bd rahhal el meskini, Casablanca 20000, Morocco",
+    "mapTitle": "Office Location",
+    "formTitle": "Send us a message",
+    "lastName": "Last Name",
+    "lastNamePlaceholder": "Your last name",
+    "firstName": "First Name",
+    "firstNamePlaceholder": "Your first name",
+    "email": "Email",
+    "emailPlaceholder": "Your email",
+    "phone": "Phone",
+    "phonePlaceholder": "Your phone number",
+    "subject": "Subject",
+    "subjectPlaceholder": "Message subject",
+    "message": "Message",
+    "messagePlaceholder": "Your message",
+    "submit": "Send",
+    "submitting": "Sending...",
+    "submitSuccess": "Message sent successfully!",
+    "submitError": "Failed to send message. Please try again."
+  },
+  "HeroSection": {
+    "titleLine1": "Legal Expertise and",
+    "titleLine2": "Enforcement Procedures",
+    "description": "Khaddari Abdelmottalib, sworn judicial officer, accompanies you in all your legal procedures with rigor and professionalism.",
+    "appointmentButton": "Make an Appointment",
+    "servicesButton": "Our Services"
+  },
+  "MissionsSection": {
+    "title": "Our Mission",
+    "description": "As a ministerial officer, our mission is to ensure the execution of court decisions and guarantee the legal security of our clients.",
+    "missions": {
+      "efficiency": {
+        "title": "Efficiency",
+        "description": "We are committed to handling your cases quickly and efficiently."
+      },
+      "confidentiality": {
+        "title": "Confidentiality",
+        "description": "We guarantee absolute discretion in handling your affairs."
+      },
+      "professionalism": {
+        "title": "Professionalism",
+        "description": "Our team is trained to provide you with impeccable quality service."
+      },
+      "accessibility": {
+        "title": "Accessibility",
+        "description": "We remain available and attentive to your specific needs."
+      }
+    },
+    "commitment": "\"Our commitment: to provide you with quality, personalized legal service tailored to your specific needs.\""
+  },
+  "QuoteSection": {
+    "quote": "\"Justice is the constant and perpetual will to render to each his due.\"",
+    "author": "Ulpian, Roman jurist"
+  },
+  "ServicesSection": {
+    "title": "Our Services",
+    "description": "Our bailiff's office offers a comprehensive range of legal services to meet your needs.",
+    "services": {
+      "actService": {
+        "title": "Service of Process",
+        "description": "Official notification of legal documents to concerned parties."
+      },
+      "judgmentExecution": {
+        "title": "Judgment Enforcement",
+        "description": "Implementation of court decisions and debt collection."
+      },
+      "observations": {
+        "title": "Official Reports",
+        "description": "Establishment of legal evidence through factual observations."
+      },
+      "debtRecovery": {
+        "title": "Debt Collection",
+        "description": "Amicable and judicial procedures for recovery of due amounts."
+      },
+      "legalDrafting": {
+        "title": "Legal Drafting",
+        "description": "Preparation of legal documents compliant with current legislation."
+      },
+      "legalAdvice": {
+        "title": "Legal Advice",
+        "description": "Guidance and support in your legal procedures."
+      }
+    }
+  },
+  "Footer": {
+    "officeTitle": "Our Office",
+    "officeAddress": "3 Rue de Thann Bd rahhal el meskini, Casablanca 20000, Morocco",
+    "emailTitle": "Email",
+    "phoneTitle": "Phone",
+    "phoneNumbers": "05 22 54 19 08 / 06 27 27 39 10",
+    "description": "Bailiff in Casablanca specialized in notification, execution and observation procedures.",
+    "popularLinks": "Popular Links",
+    "quickLinks": "Quick Links",
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "missions": "Missions",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "help": "Help",
+    "copyright": "© Khaddari Abdelmottalib Office. All rights reserved.",
+    "designedBy": "Designed by",
+    "devName": "DEVLouizi",
+    "devPhone": "0631093503"
+  }
+ 
+}
