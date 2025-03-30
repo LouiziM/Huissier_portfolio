@@ -231,7 +231,7 @@ const config = {
   },
   plugins: [
     require("tailwindcss-animate"),
-    ({ addUtilities }) => {
+    ({ addUtilities }: { addUtilities: (utilities: Record<string, any>) => void }) => {
       const newUtilities = {
         ".text-gold-gradient": {
           background: "linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C)",
@@ -314,8 +314,9 @@ const config = {
             "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)",
         },
       }
-      addUtilities(newUtilities, ["responsive", "hover"])
-    },
+
+      addUtilities(newUtilities);
+        },
   ],
 } satisfies Config
 
