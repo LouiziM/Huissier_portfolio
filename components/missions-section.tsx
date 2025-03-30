@@ -1,6 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle } from "lucide-react"
-import Image from "next/image"
 import { AnimatedSection } from "@/components/animated-section"
 import { useTranslations } from 'next-intl'
 

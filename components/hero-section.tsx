@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ChevronRight } from "lucide-react"
 import { AnimatedSection } from "@/components/animated-section"
