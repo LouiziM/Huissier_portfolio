@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Scale, FileText, Gavel, FileCheck, FileSearch, UserCheck } from "lucide-react"
+import { FileText, Gavel, FileCheck } from "lucide-react"
 import { AnimatedSection } from "@/components/animated-section"
 import { useTranslations } from 'next-intl'
 
