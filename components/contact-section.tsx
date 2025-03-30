@@ -49,7 +49,7 @@ export function ContactSection() {
         <AnimatedSection animation="fade-up">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('title')}</h2>
-            <p className="text-muted-foreground">
+            <p className="px-2 text-muted-foreground">
               {t('description')}
             </p>
             <div className="section-divider mx-auto"></div>

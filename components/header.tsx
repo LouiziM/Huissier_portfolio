@@ -81,9 +81,10 @@ export function Header() {
             {t('jobTitle')}
           </span>
         </div>
-
+        
         {/* Mobile icons container */}
         <div className="flex items-center gap-2 md:hidden">
+        <LocaleSwitcher />
           {mounted && (
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -94,7 +95,7 @@ export function Header() {
             </button>
           )}
 
-          <LocaleSwitcher />
+        
 
           {/* Mobile menu button */}
           <Sheet>

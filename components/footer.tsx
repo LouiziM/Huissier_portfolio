@@ -240,7 +240,7 @@ export function Footer() {
             {t('copyright')}
           </p>
           <div className="flex items-center justify-center">
-            <p className="text-gray-400">
+            <p className="mr-10 text-gray-400">
               {t('designedBy')}{" "}
               <button
                 onClick={() => setShowPhone(!showPhone)}
