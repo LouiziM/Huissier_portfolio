@@ -128,8 +128,8 @@ const config = {
           "50%": { transform: "translateY(-10px)" },
         },
         pulse: {
-          "0%, 100%": { opacity: 1 },
-          "50%": { opacity: 0.5 },
+          "0%, 100%": { opacity: "1" }, // ✅ Fixed - string value
+          "50%": { opacity: "0.5" },    // ✅ Fixed - string value
         },
         "gold-pulse": {
           "0%": { boxShadow: "0 0 0 0 rgba(167, 138, 90, 0.7)" },
