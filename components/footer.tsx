@@ -84,7 +84,10 @@ export function Footer() {
                 </svg>
               </div>
               <h5 className="text-white text-lg font-medium mb-1">{t('phoneTitle')}</h5>
+              <a href="https://wa.me/212627273910" className="hover:text-gold transition-colors" target="_blank" rel="noopener noreferrer">
+              
               <p className="text-gray-300">{t('phoneNumbers')}</p>
+              </a>
             </div>
           </div>
         </div>

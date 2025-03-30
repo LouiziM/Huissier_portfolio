@@ -21,22 +21,7 @@ export function ServicesSection() {
       title: t('services.observations.title'),
       description: t('services.observations.description'),
       icon: <FileCheck className="h-10 w-10 text-gold" />,
-    },
-    {
-      title: t('services.debtRecovery.title'),
-      description: t('services.debtRecovery.description'),
-      icon: <Scale className="h-10 w-10 text-gold" />,
-    },
-    {
-      title: t('services.legalDrafting.title'),
-      description: t('services.legalDrafting.description'),
-      icon: <FileSearch className="h-10 w-10 text-gold" />,
-    },
-    {
-      title: t('services.legalAdvice.title'),
-      description: t('services.legalAdvice.description'),
-      icon: <UserCheck className="h-10 w-10 text-gold" />,
-    },
+    }
   ]
 
   return (

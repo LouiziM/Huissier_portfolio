@@ -1,10 +1,10 @@
 import Image from "next/image"
 import { AnimatedSection } from "@/components/animated-section"
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
 export function AboutSection() {
   const t = useTranslations('AboutSection')
-  
+  const locale = useLocale();
   return (
     <section id="a-propos" className="py-20 bg-secondary/50">
       <div className="section-content">
@@ -26,14 +26,14 @@ export function AboutSection() {
           </AnimatedSection>
 
           <AnimatedSection animation="fade-left" delay={200}>
-            <h2 className="px-2 text-3xl md:text-4xl font-bold mb-6">{t('title')}</h2>
+            <h2 className="px-2 text-3xl md:text-4xl font-bold mb-6"  dir={locale==='ar'?'rtl':'ltr'}>{t('title')}</h2>
             <div className="section-divider w-24 mx-0 mb-6"></div>
 
-            <p className="px-2 text-muted-foreground mb-4">
+            <p className="px-2 text-muted-foreground mb-4" dir={locale==='ar'?'rtl':'ltr'}>
               {t('description1')}
             </p>
 
-            <p className="px-2 text-muted-foreground mb-6">
+            <p className="px-2 text-muted-foreground mb-6"  dir={locale==='ar'?'rtl':'ltr'}>
               {t('description2')}
             </p>
           </AnimatedSection>

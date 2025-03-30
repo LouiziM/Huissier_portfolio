@@ -65,8 +65,7 @@ export function ContactSection() {
                     <Phone className="h-6 w-6 text-gold" />
                   </div>
                   <h3 className="font-semibold mb-2">{t('phoneTitle')}</h3>
-                  <a href="tel:0627273910" className="text-muted-foreground hover:text-gold transition-colors">
-                    {t('phone1')}
+                  <a href="https://wa.me/212627273910" className="hover:text-gold transition-colors" target="_blank" rel="noopener noreferrer">                    {t('phone1')}
                   </a>
                   <a href="tel:0522541908" className="text-muted-foreground hover:text-gold transition-colors">
                     {t('phone2')}
