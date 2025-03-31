@@ -9,11 +9,13 @@ import { useTheme } from "next-themes"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { useRouter, usePathname } from "@/i18n/navigation"
 import { useTranslations } from 'next-intl'
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden"
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
+  const [sheetOpen, setSheetOpen] = useState(false)
   const router = useRouter()
   const pathname = usePathname()
   const t = useTranslations('Header')
@@ -63,6 +65,25 @@ export function Header() {
     )
   }
 
+  const handleMobileLinkClick = (hash: string) => {
+    // First close the sheet
+    setSheetOpen(false)
+    
+    // After sheet is closed, navigate to the section
+    setTimeout(() => {
+      // Navigate to the hash without page reload
+      router.push(hash);
+      
+      // After navigation, scroll to the element
+      setTimeout(() => {
+        const targetElement = document.querySelector(hash);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }, 300); // Increased timeout to ensure sheet closes completely
+  }
+
   return (
     <header
       className={`relative z-50 flex flex-col md:flex-row transition-all duration-300 ${isScrolled ? "shadow-gold-md bg-white/95 backdrop-blur-sm dark:bg-gray-900/95" : ""
@@ -95,33 +116,35 @@ export function Header() {
             </button>
           )}
 
-
-
           {/* Mobile menu button */}
-          <Sheet>
+          <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
             <SheetTrigger asChild>
               <button className="w-8 h-8 flex items-center justify-center border-2 border-gold rounded-sm text-gold hover:bg-gold hover:text-black transition-colors animate-border-glow">
                 <Menu className="h-4 w-4" />
                 <span className="sr-only">{t('menu')}</span>
               </button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-full p-0">
-              <div className="flex flex-col h-full bg-[#2d2d35] text-white">
-                <div className="flex items-center justify-between p-4 border-b border-gray-700">
+            <SheetContent side="right" className="w-full p-0 h-screen">
+              <VisuallyHidden>
+                <h2>{t('navigationMenu')}</h2>
+              </VisuallyHidden>
+              <div className="flex flex-col h-full bg-[#2d2d35] text-white overflow-y-auto">
+                <div className="flex items-center justify-between p-4 border-b border-gray-700 sticky top-0 bg-[#2d2d35] z-10">
                   <Link href="/" className="flex flex-col">
                     <span className="text-xl font-bold text-gold-gradient animate-text-shimmer">
                       KHADDARI ABDELMOTTALIB
                     </span>
                     <span className="text-xs text-gold-light italic font-serif">{t('jobTitle')}</span>
                   </Link>
-                  <SheetClose asChild>
-                    <Button variant="ghost" size="icon" className="text-white hover:text-gold">
-                      <div className="!w-16 !h-16 mr-8">
-                        <X className="w-full h-full" />
-                      </div>
-                      <span className="sr-only">{t('close')}</span>
-                    </Button>
-                  </SheetClose>
+                  <Button 
+                    variant="ghost" 
+                    size="icon" 
+                    className="text-white hover:text-gold"
+                    onClick={() => setSheetOpen(false)}
+                  >
+                    <X className="w-6 h-6" />
+                    <span className="sr-only">{t('close')}</span>
+                  </Button>
                 </div>
 
                 {/* Contact info in mobile menu */}
@@ -167,58 +190,63 @@ export function Header() {
                 </div>
 
                 <nav className="flex flex-col gap-1 p-4 flex-grow">
-                  <Link
-                    href="#accueil"
-                    className="text-lg font-extrabold p-4 hover:bg-gold hover:text-black transition-colors rounded animate-fade-in-right"
+                  <button
+                    onClick={() => handleMobileLinkClick('#accueil')}
+                    className="text-lg font-extrabold p-4 hover:bg-gold hover:text-black transition-colors rounded animate-fade-in-right text-left"
                     style={{ animationDelay: "100ms" }}
                   >
                     {t('home')}
-                  </Link>
-                  <Link
-                    href="#a-propos"
-                    className="text-lg font-extrabold p-4 hover:bg-gold hover:text-black transition-colors rounded animate-fade-in-right"
+                  </button>
+                  <button
+                    onClick={() => handleMobileLinkClick('#a-propos')}
+                    className="text-lg font-extrabold p-4 hover:bg-gold hover:text-black transition-colors rounded animate-fade-in-right text-left"
                     style={{ animationDelay: "200ms" }}
                   >
                     {t('about')}
-                  </Link>
-                  <Link
-                    href="#services"
-                    className="text-lg font-extrabold p-4 hover:bg-gold hover:text-black transition-colors rounded animate-fade-in-right"
+                  </button>
+                  <button
+                    onClick={() => handleMobileLinkClick('#services')}
+                    className="text-lg font-extrabold p-4 hover:bg-gold hover:text-black transition-colors rounded animate-fade-in-right text-left"
                     style={{ animationDelay: "300ms" }}
                   >
                     {t('services')}
-                  </Link>
-                  <Link
-                    href="#missions"
-                    className="text-lg font-extrabold p-4 hover:bg-gold hover:text-black transition-colors rounded animate-fade-in-right"
+                  </button>
+                  <button
+                    onClick={() => handleMobileLinkClick('#missions')}
+                    className="text-lg font-extrabold p-4 hover:bg-gold hover:text-black transition-colors rounded animate-fade-in-right text-left"
                     style={{ animationDelay: "400ms" }}
                   >
                     {t('missions')}
-                  </Link>
-                  <Link
-                    href="#contact"
-                    className="text-lg font-extrabold p-4 hover:bg-gold hover:text-black transition-colors rounded animate-fade-in-right"
+                  </button>
+                  <button
+                    onClick={() => handleMobileLinkClick('#contact')}
+                    className="text-lg font-extrabold p-4 hover:bg-gold hover:text-black transition-colors rounded animate-fade-in-right text-left"
                     style={{ animationDelay: "500ms" }}
                   >
                     {t('contact')}
-                  </Link>
+                  </button>
                 </nav>
 
                 {/* Social icons in mobile menu */}
                 <div className="flex justify-center gap-4 p-4 border-t border-gray-700/50">
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/khaddari-abdelmottalib-70a45123b/?originalSubdomain=ma"
                     className="w-10 h-10 flex items-center justify-center border border-gold rounded-sm text-gold hover:bg-gold hover:text-black transition-colors"
                     aria-label="LinkedIn"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <Linkedin className="h-5 w-5" />
                   </a>
                 </div>
 
                 <div className="p-4 border-t border-gray-700">
-                  <Button className="w-full bg-gold hover:bg-gold-dark text-black hover:text-white text-base font-bold py-3 animate-gold-pulse">
+                  <button
+                    onClick={() => handleMobileLinkClick('#contact')}
+                    className="w-full bg-gold hover:bg-gold-dark text-black hover:text-white text-base font-bold py-3 animate-gold-pulse rounded"
+                  >
                     {t('quoteRequest')}
-                  </Button>
+                  </button>
                 </div>
               </div>
             </SheetContent>
@@ -252,20 +280,20 @@ export function Header() {
               <span>khaddari02@gmail.com</span>
             </a>
             <a href="https://wa.me/212627273910" className="flex items-center gap-2 text-sm md:text-base text-gray-600 dark:text-gray-300 hover:text-gold transition-colors group" target="_blank" rel="noopener noreferrer">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="min-h-6  min-w-6  md:h-5 md:w-5 text-gold group-hover:animate-float"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-              />
-            </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="min-h-6  min-w-6  md:h-5 md:w-5 text-gold group-hover:animate-float"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
               <span>{t('phone')}</span>
             </a>
           </div>
@@ -335,9 +363,11 @@ export function Header() {
             </nav>
 
             <div className="hidden lg:block">
-              <Button className="bg-gold hover:bg-gold-dark text-black hover:text-white font-extrabold rounded-md px-6 py-3 h-auto text-base transition-colors shadow-gold-md hover:shadow-gold-lg animate-gold-pulse">
-                {t('quoteRequest')}
-              </Button>
+              <Link href="#contact">
+                <Button className="w-full bg-gold hover:bg-gold-dark text-black hover:text-white text-base font-bold py-3 animate-gold-pulse">
+                  {t('quoteRequest')}
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
